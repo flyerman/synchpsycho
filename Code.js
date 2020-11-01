@@ -13,7 +13,7 @@ function synchPsychos() {
     var formItems = form.getItems();
     for (var i = 0, j = 0; i < formItems.length; i++) {
         var formItem = formItems[i];
-        if (formItem.getType() == FormApp.ItemType.LIST) {
+        if (formItem.getType() == FormApp.ItemType.LIST && formItem.getTitle() == 'Psycho') {
             var listItem = formItem.asListItem();
             listItem.setChoiceValues(names);
         }
